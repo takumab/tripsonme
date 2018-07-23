@@ -1,0 +1,11 @@
+.navbar {
+  background-color: #C27056;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.nav-link {
+  color: #fff;
+}
