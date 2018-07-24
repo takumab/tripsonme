@@ -1,12 +1,13 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1><em>Trip on Me</em></h1>
+    <h3><em>Crowdfunding for youngins to travel the globe!</em></h3>
   </div>
 </div>
 
 <h2>Featured Trips</h2>
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-center">
     {{#each model as |trip|}}
       {{featured-trips trip=trip}}
     {{/each}}

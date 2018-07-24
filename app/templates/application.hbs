@@ -1,7 +1,7 @@
 {{#bs-navbar type=type backgroundColor=bg collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
   <div class="navbar-header">
     {{navbar.toggle}}
-    {{#link-to "index" class="navbar-brand"}}TOM{{/link-to}}
+    {{#link-to "index" class="navbar-brand"}}ToM{{/link-to}}
   </div>
   {{#navbar.content}}
     {{#navbar.nav as |nav|}}
@@ -16,4 +16,4 @@
 {{/bs-navbar}}
 
 
-  {{outlet}}
+{{outlet}}

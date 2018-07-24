@@ -3,12 +3,13 @@
  background-color: #C27056;
 }
 
-.navbar .navbar-nav  {
-  color: #fff;
+.navbar-nav .active > .nav-link {
+  color: #FFFFFF !important;
+  text-transform: uppercase;
 }
 
- .nav-link {
-  color: #fff;
+.navbar-header > .navbar-brand {
+  color: #FFFFFF;
 }
 
 .jumbotron-fluid {
@@ -22,13 +23,18 @@ h1 {
   font-size: 120px;
   font-family: arial;
   text-align: center;
+  margin-bottom: 0;
 }
 
 h2 {
   text-align: center;
   font-family: arial;
+  margin-bottom: 30px;
 }
 
-.row {
-  margin: 0 auto;
+h3 {
+  color: #fff;
+  font-size: 25px;
+  font-family: arial;
+  text-align: center;
 }
