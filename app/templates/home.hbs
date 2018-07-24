@@ -1,1 +1,14 @@
-<h1>Welcome to Trips on Me!</h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1><em>Trip on Me</em></h1>
+  </div>
+</div>
+
+<h2>Featured Trips</h2>
+<div class="container">
+  <div class="row">
+    {{#each model as |trip|}}
+      {{featured-trips trip=trip}}
+    {{/each}}
+  </div>
+</div>
