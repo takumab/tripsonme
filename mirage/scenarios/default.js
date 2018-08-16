@@ -6,4 +6,6 @@ export default function( server) {
   */
 
   server.createList('trip', 3);
+
+  server.createList('spot', 12);
 }

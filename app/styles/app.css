@@ -57,3 +57,13 @@ h3 {
   line-height: 60px;
   background-color: #C27056;
 }
+
+.justified {
+  text-align: justify;
+}
+
+#statement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

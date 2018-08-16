@@ -1,0 +1,26 @@
+<section>
+  <header>
+    <h2>Spots available</h2>
+  </header>
+
+  <article id="spots-list">
+    <div class="container">
+      <div class="row">
+        {{#each model as |spot|}}
+          <div class="col-sm-4">
+            <div class="card">
+              <img class="card-img-top" src="{{spot.image}}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{spot.cityAndCoutnry}}</h5>
+                <p class="card-text">{{spot.info}}</p>
+                <button type='button' class="btn btn-primary" >
+                  View spot
+                </button>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </article>
+</section>
