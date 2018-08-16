@@ -1,7 +1,6 @@
-# tripsonme
+# Trips On Me
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Crowdfunding for youth who'd like to travel the world!
 
 ## Prerequisites
 
