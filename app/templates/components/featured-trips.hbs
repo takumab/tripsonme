@@ -3,8 +3,47 @@
     <img class="card-img-top" src="{{trip.image}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{trip.city}}</h5>
+      <h6>{{trip.name}}</h6>
       <p class="card-text">{{trip.description}}</p>
-      <a href="#" class="btn btn-primary">View trip</a>
+      <button type='button' onclick={{action 'viewTrip'}} class="btn btn-primary" data-toggle="modal" data-target="#modal" >
+        View trip
+      </button>
     </div>
   </div>
 </div>
+
+<!-- Modal -->
+{{!-- <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> --}}
+{{#if showModal}}
+  {{#bs-modal  onHide=(action 'hideTrip') as |modal|}}
+   {{#modal.header}}
+     <h4 class="modal-title"><i class="glyphicon glyphicon-alert"></i>{{trip.city}}</h4>
+   {{/modal.header}}
+   {{#modal.body}}
+    <img class="card-img-top" src="{{trip.image}}" alt="Card image cap">
+    <h6>{{trip.name}}</h6>
+   {{/modal.body}}
+   {{#modal.footer as |footer|}}
+     {{#bs-button onClick=(action modal.close) type="danger"}}Oh no, forget it!{{/bs-button}}
+     {{#bs-button onClick=(action modal.submit) type="success"}}Yeah!{{/bs-button}}
+   {{/modal.footer}}
+ {{/bs-modal}}
+{{/if}}
