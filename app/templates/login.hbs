@@ -1,1 +1,18 @@
-{{outlet}}
+<div class="col-sm-4 m-auto mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title text-center">Log In</h5>
+      {{#bs-form onSubmit=(action "submit") as |form|}}
+        {{#form.group}}
+          <label class="control-label">Email</label>
+          <input type="text" value={{email}} class="form-control">
+        {{/form.group}}
+        {{#form.group}}
+          <label class="control-label">Password</label>
+          <input type="password" value={{password}} class="form-control">
+        {{/form.group}}
+        {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
+      {{/bs-form}}
+    </div>
+  </div>
+</div>
